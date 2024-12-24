@@ -1,0 +1,150 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	background-image: url("images/main_bg.png");
+	object-fit: contain;
+}
+
+header {
+    width: 100%;
+    height: 80px;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-sizing: border-box;
+}
+
+header .logo img {
+    height: 50px;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+        margin-left: auto; /* This line pushes the nav items to the right */
+
+}
+
+header nav a {
+    text-decoration: none;
+    color: #5C3A1A;
+    font-size: 0.85em;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.mobile-menu {
+    display: flex;
+    flex-direction: column;
+    width: 30px;
+    height: 30px;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.burger-icon {
+    display: none;
+    width: 24px;
+    height: 24px;
+}
+
+.burger-icon line {
+    stroke: #333;
+    stroke-width: 2;
+    stroke-linecap: round;
+    transition: all 0.3s ease;
+}
+
+.mobile-menu-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.mobile-menu-links a {
+    margin-bottom: 20px;
+    text-decoration: none;
+    color: #5C3A1A;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.mobile-menu-links a:last-child {
+    margin-bottom: 0;
+}
+
+.mobile-menu-links.active {
+    display: flex;
+}
+.main_content {
+	width: 100%;
+    margin-top: 90px; /* высота хедера */
+    height: calc(100% - 100px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+	
+}
+.svg-container {
+    position: relative;
+    width: 70%;
+	height: auto;
+ 
+}
+
+.svg-bg {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Style for the clickable diamonds */
+.diamond {
+    position: absolute;
+    width: 80px;  /* Adjust size according to the actual diamond size */
+    height: 80px; /* Adjust size according to the actual diamond size */
+    cursor: pointer;
+    /* Border is optional for debugging */
+    border: 2px solid red;
+}
+
+/* Positioning the diamonds based on the SVG coordinates */
+#diamond1 {
+    top: 6%; /* Adjust to match the actual position in the SVG */
+    left: 48%; /* Adjust to match the actual position in the SVG */
+}
+
+#diamond2 {
+    top: 45%; /* Adjust to match the actual position in the SVG */
+    left: 85%; /* Adjust to match the actual position in the SVG */
+}
+
+#diamond3 {
+    bottom: 6%; /* Adjust to match the actual position in the SVG */
+    left: 48%; /* Adjust to match the actual position in the SVG */
+}
+
+#diamond4 {
+    top: 45%; /* Adjust to match the actual position in the SVG */
+    left: 10%; /* Adjust to match the actual position in the SVG */
+}

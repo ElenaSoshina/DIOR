@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мастерская</title>
+    <link rel="stylesheet" href="workshop.module.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/logo.svg" alt="logo">
+            </a>
+        </div>
+        <nav class="desktop-menu">
+	          <a href="#">Мастерская</a>
+            <a href="#">Компания</a>
+            <a href="partners.html">Партнеры</a>
+            <a href="#">Контакты</a>
+	          <a href="#">Отзывы</a>
+        </nav>
+        <div class="mobile-menu">
+            <div class="menu-icon" onclick="toggleMenu()">
+                 <svg class="burger-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                <line class="line1" x1="3" y1="6" x2="21" y2="6" />
+                <line class="line2" x1="3" y1="12" x2="21" y2="12" />
+                <line class="line3" x1="3" y1="18" x2="21" y2="18" />
+            </svg>
+            </div>
+        </div>
+        <div class="mobile-menu-links">
+            <a href="#">Мастерская</a>
+            <a href="#">Компания</a>
+            <a href="#">Партнеры</a>
+            <a href="#">Контакты</a>
+	          <a href="#">Отзывы</a>
+        </div>
+    </header>
+
+    <div class="header-content">
+        <div class="back-arrow" id='back_arrow'>
+            <a href="index.html">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#efd597" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left">
+                    <line x1="19" y1="12" x2="5" y2="12"></line>
+                    <polyline points="12 19 5 12 12 5"></polyline>
+                </svg>
+            </a>
+        </div>
+        <h1>Мастерская</h1>
+	    <h3>Любые изделия на заказ</h3>
+    </div>
+
+    <main>
+
+<!--         <section class="slider-container"> -->
+<!--             <div class="slider"> -->
+<!--                 <div class="slide active"><img src="images/workshop/1.jpeg" alt="Item 1"></div> -->
+<!--                 <div class="slide"><img src="images/workshop/2.jpeg" alt="Item 2"></div> -->
+<!--                 <div class="slide"><img src="images/workshop/3.jpeg" alt="Item 3"></div> -->
+<!--                 &lt;!&ndash; Add more slides here, up to 20 &ndash;&gt; -->
+<!--                 <div class="slide"><img src="images/workshop/4.jpeg" alt="Item 4"></div> -->
+<!--                 <div class="slide"><img src="images/workshop/5.jpeg" alt="Item 5"></div> -->
+<!-- 	            <div class="slide"><img src="images/workshop/6.jpeg" alt="Item 6"></div> -->
+<!-- 	            <div class="slide"><img src="images/workshop/7.jpeg" alt="Item 7"></div> -->
+<!-- 	            <div class="slide"><img src="images/workshop/8.jpeg" alt="Item 8"></div> -->
+<!-- 	            <div class="slide"><img src="images/workshop/9.jpeg" alt="Item 9"></div> -->
+<!-- 	            <div class="slide"><img src="images/workshop/10.jpeg" alt="Item 10"></div> -->
+<!-- 	            <div class="slide"><img src="images/workshop/11.jpeg" alt="Item 11"></div> -->
+<!-- 	            <div class="slide"><img src="images/workshop/12.jpeg" alt="Item 12"></div> -->
+<!--                 &lt;!&ndash; Continue adding images up to 20 &ndash;&gt; -->
+<!--             </div> -->
+<!--              -->
+<!--         </section> -->
+<!-- 	     -->
+<!-- 	    <div class="arrows"> -->
+<!--                 <div class="arrow left-arrow">&lt;</div> -->
+<!--                 <div class="arrow right-arrow">&gt;</div> -->
+<!--             </div> -->
+	    
+	    <div class="slider-container">
+    <div class="slider"></div>
+</div>
+<div class="arrows">
+<!--     <div class="arrow left-arrow">&lt;</div> -->
+	<div class="back-arrow arrow left-arrow" id='left_arrow'>
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#efd597" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left">
+                    <line x1="19" y1="12" x2="5" y2="12"></line>
+                    <polyline points="12 19 5 12 12 5"></polyline>
+                </svg>
+        </div>
+<!--     <div class="arrow right-arrow">&gt;</div> -->
+	<div class="back-arrow arrow right-arrow" id='right_arrow'>
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#efd597" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left">
+                    <line x1="19" y1="12" x2="5" y2="12"></line>
+                    <polyline points="12 19 5 12 12 5"></polyline>
+                </svg>
+        </div>
+</div>
+
+        <section class="contact-info">
+            <p class="address">Адрес: г. Москва, ул. Донская, д. 8 стр. 1 Контакты: +7 (956) 567 3245</p>
+<!--             <p class="contacts">Контакты: +7 (956) 567 3245</p> -->
+            <div class="contact-icons">
+                <a href="#"><img src="images/whatsapp.svg" alt="WhatsApp"></a>
+                <a href="#"><img src="images/telegram.svg" alt="Telegram"></a>
+            </div>
+        </section>
+
+        <section class="form-section">
+            <h3>Оставить заявку</h3>
+            <form action="#">
+                <label for="name">Имя</label>
+                <input type="text" id="name" name="name" placeholder="Имя">
+
+                <label for="phone">Телефон</label>
+                <input type="text" id="phone" name="phone" placeholder="Введите номер телефона">
+
+                <label for="comment">Комментарий</label>
+                <textarea id="comment" name="comment" placeholder="Ваш запрос"></textarea>
+
+                <button type="submit">Отправить</button>
+            </form>
+        </section>
+    </main>
+    <!-- Модальное окно -->
+<div id="modal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modalImg">
+</div>
+    <script src="script_workputshop.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,372 @@
+/* Импорт шрифтов */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+/* Основные стили для страницы */
+body {
+    margin: 0;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #F5F4F2;
+    font-family: 'Great Vibes', cursive;
+    color: #5C3A1A;
+}
+
+/* Стили для шапки сайта */
+header {
+    width: 100%;
+    height: 80px;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed; /* Закрепляем шапку */
+    top: 0;
+    left: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-sizing: border-box;
+}
+
+header .logo img {
+    height: 50px;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-left: auto;
+}
+
+header nav a {
+    text-decoration: none;
+    color: #5C3A1A;
+    font-size: 0.85em;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Стили для мобильного меню */
+.mobile-menu {
+    display: flex;
+    flex-direction: column;
+    width: 30px;
+    height: 30px;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.burger-icon {
+    display: none;
+    width: 24px;
+    height: 24px;
+}
+
+.burger-icon line {
+    stroke: #333;
+    stroke-width: 2;
+    stroke-linecap: round;
+    transition: all 0.3s ease;
+}
+
+.mobile-menu-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.mobile-menu-links a {
+    margin-bottom: 20px;
+    text-decoration: none;
+    color: #5C3A1A;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.mobile-menu-links a:last-child {
+    margin-bottom: 0;
+}
+
+.mobile-menu-links.active {
+    display: flex;
+}
+
+/* Стили для контента шапки */
+.header-content {
+    position: relative;
+    top: 85px; /* Отступ вниз от шапки */
+    width: 100%;
+    padding: 20px 30px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.header-content h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 48px;
+    color: #5C3A1A;
+    margin: 0;
+}
+
+.header-content h3 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 24px;
+    color: #5C3A1A;
+    margin: 0;
+}
+
+/* Стили для стрелок навигации слайдера */
+.back-arrow {
+    position: absolute;
+    left: 20px; /* Расположить стрелку слева */
+    top: 50%;
+    transform: translateY(-50%); /* Центрирование стрелки по высоте */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.back-arrow svg {
+    width: 30px;
+    height: 30px;
+}
+
+/* Стили для слайдера */
+.slider-container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 85px auto;
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    gap: 20px;
+    will-change: transform;
+}
+
+.slide {
+    min-width: calc(33.33% - 20px);
+    box-sizing: border-box;
+    transition: transform 0.5s ease-in-out;
+    border-radius: 10px;
+    object-fit: contain;
+    /*opacity: 0.6;*/
+}
+
+/*.slide.active {*/
+/*    transform: scale(1.1);*/
+/*    opacity: 1;*/
+/*}*/
+
+.slide img {
+    width: 100%;
+    height: 400px;
+    
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide.active img {
+    /*transform: scale(1.2); !* Увеличение размера активного изображения *!*/
+    border-radius: 10px;
+    /*height: 460px;*/
+}
+
+.arrows {
+    position: absolute;
+    top: 40%;
+    width: 79%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    z-index: 10;
+    pointer-events: none; /* Чтобы стрелки не перекрывали клики по изображениям */
+}
+
+.arrow {
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    pointer-events: all; /* Включаем кликабельность для стрелок */
+}
+
+.arrow:hover {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.arrow.left-arrow {
+    transform: translateX(-60px); /* Вынести левую стрелку за пределы контейнера */
+}
+
+.arrow.right-arrow {
+    transform: translateX(60px); /* Вынести правую стрелку за пределы контейнера */
+}
+
+
+/* Стили для индикаторов слайдера */
+.slider-indicators {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.slider-indicators .indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ddd;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.slider-indicators .indicator.active {
+    background-color: #5C3A1A;
+}
+
+/* Стили для информации о контактах */
+.contact-info {
+    text-align: center;
+    margin-top: 40px;
+    color: #5C3A1A;
+}
+
+.contact-info .address,
+.contact-info .contacts {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.contact-icons a img {
+    width: 30px;
+    margin: 0 10px;
+    transition: transform 0.3s ease;
+}
+
+.contact-icons a img:hover {
+    transform: scale(1.2);
+}
+
+/* Стили для формы обратной связи */
+.form-section {
+    max-width: 700px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.form-section h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'Great Vibes', cursive;
+    font-size: 36px;
+    color: #5C3A1A;
+}
+
+.form-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-section label {
+    font-family: 'Great Vibes', cursive;
+    color: #5C3A1A;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+.form-section input,
+.form-section textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    color: #5C3A1A;
+    font-family: 'Great Vibes', cursive;
+    box-sizing: border-box;
+}
+
+.form-section button {
+    background-color: #5C3A1A;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Great Vibes', cursive;
+}
+
+.form-section button:hover {
+    background-color: #7b4d28;
+}
+
+.form-section textarea {
+    resize: none;
+    height: 100px;
+}
+
+/* Стили для модального окна */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+    margin: 40px auto;
+    display: block;
+    max-width: 80%;
+    max-height: 80%;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+

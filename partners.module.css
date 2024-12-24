@@ -1,0 +1,242 @@
+/* Общие стили */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #F5F4F2;
+    /*font-family: 'Montserrat', sans-serif;*/
+    font-family: 'Great Vibes', cursive;
+    color: #5C3A1A;
+}
+
+header {
+    width: 100%;
+    height: 80px;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-sizing: border-box;
+}
+
+header .logo img {
+    height: 50px;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-left: auto;
+}
+
+header nav a {
+    text-decoration: none;
+    color: #5C3A1A;
+    font-size: 0.85em;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.mobile-menu {
+    display: flex;
+    flex-direction: column;
+    width: 30px;
+    height: 30px;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.burger-icon {
+    display: none;
+    width: 24px;
+    height: 24px;
+}
+
+.burger-icon line {
+    stroke: #333;
+    stroke-width: 2;
+    stroke-linecap: round;
+    transition: all 0.3s ease;
+}
+
+.mobile-menu-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.mobile-menu-links a {
+    margin-bottom: 20px;
+    text-decoration: none;
+    color: #5C3A1A;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.mobile-menu-links a:last-child {
+    margin-bottom: 0;
+}
+
+.mobile-menu-links.active {
+    display: flex;
+}
+
+.header-content {
+    position: absolute;
+    top: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px 30px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+.back-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.back-arrow svg {
+    width: 30px;
+    height: 30px;
+}
+
+.header-content h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 48px;
+    color: #5C3A1A;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 40px;
+    border-bottom: 2px solid #E8E4DA;
+}
+
+.tab-button {
+    background-color: #EFEAE3;
+    border: 1px solid #D6CFC4;
+    border-radius: 8px 8px 0 0;
+    font-family: 'Great Vibes', cursive;
+    font-size: 24px;
+    color: #5C3A1A;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-right: 10px;
+}
+
+.tab-button.active {
+    background-color: #FFFFFF;
+    border-bottom: 2px solid transparent;
+}
+
+.tab-content {
+    padding: 20px;
+    background-color: #FFF7EF;
+    border-radius: 10px;
+    border: 1px solid #D6CFC4;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    height: 550px; /* Максимальная высота */
+    overflow: hidden;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    opacity: 1;
+    visibility: visible;
+}
+
+.tab-content.hidden {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+.partners-content {
+    margin: 0 auto;
+    width: 80%;
+}
+
+.partner-details {
+    height: 550px; /* Максимальная высота контента */
+    overflow: hidden;
+    transition: height 0.3s ease;
+    flex-grow: 1;
+    font-size: 24px;
+}
+
+.partner-details a {
+    color: #5C3A1A;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.partner-details a:hover {
+    color: #efd597;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.partner-details.expanded {
+    overflow: auto;
+}
+
+.details-button {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px; /* Отступ от нижнего края контейнера */
+}
+
+.details-button button {
+    background-color: #EFEAE3;
+    color: #5C3A1A;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    font-family: 'Great Vibes', cursive;
+    font-size: 24px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.details-button button:hover {
+    background-color: #5C3A1A;
+    color: #EFEAE3;
+}
